@@ -1,5 +1,6 @@
 import { createContext, useState } from "react"
 import dayjs from "dayjs"
+import jobs from '../data/jobs'
 
 const GlobalContext = createContext({
     monthIndex : 0,
@@ -8,9 +9,10 @@ const GlobalContext = createContext({
 
 export const GlobalProvider = ({ children }) => {
     const [monthIndex, setMonthIndex] = useState(dayjs().month())
+    const [jobData, setJobData] = useState(jobs)
 
     return <GlobalContext.Provider 
-    value={{ monthIndex, setMonthIndex }}>
+    value={{ monthIndex, setMonthIndex, jobData }}>
         {children}
     </GlobalContext.Provider>
 }

@@ -15,8 +15,6 @@ const CalendarHeader = () => {
 
     const handleReset = () => {
         setMonthIndex(dayjs().month())
-        console.log(dayjs().month())
-        console.log(dayjs().day())
     }
 
     return (

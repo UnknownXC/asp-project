@@ -13,7 +13,7 @@ const CalendarUI = () => {
 
     return (
         <div id='calendar' className='container'>
-            <div className='h-screen w-screen flex flex-col p-10'>
+            <div className='w-screen min-h-screen flex flex-col p-10'>
                 <CalendarHeader />
                 <div className='flex flex-1'>
                     {/* <Sidebar /> */}
